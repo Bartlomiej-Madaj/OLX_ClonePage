@@ -4,18 +4,6 @@ export type StyledProps = {
     headerColor: string;
   };
 };
-
-export interface Advertisements {
-  title: string;
-  category: string;
-  image: string[];
-  price: number;
-  date: string;
-  location: string;
-  id: string;
-  description: string;
-}
-
 export interface CategoryItem {
   id: string;
   title: string;
@@ -24,7 +12,7 @@ export interface CategoryItem {
 
 export interface newAdvertisement {
   id: string;
-  date: string;
+  date: number;
   title: string;
   price: string;
   isNegotiating: boolean;
@@ -35,4 +23,12 @@ export interface newAdvertisement {
   userName: string;
   email: string;
   phoneNumber: number;
+}
+
+export interface Favorite {
+  id: string;
+  title: string;
+  image: string;
+  note: string;
+  description: string;
 }

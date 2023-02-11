@@ -1,13 +1,13 @@
-import { newAdvertisement, CategoryItem } from "../types/globalType";
+import { newAdvertisement, CategoryItem, Favorite } from "../types/globalType";
 
-export const AddsArray: newAdvertisement[] = [
+export const Advertisements: newAdvertisement[] = [
   {
     id: "1",
     title:
-      "Bugatti silik w stanie dobrym, nie bity, niemiec płakał jak sprzedawał",
+      "Bugatti silnik w stanie dobrym, nie bity, niemiec płakał jak sprzedawał",
     category: "Elektronika",
     image: ["/images/adds/bugatti.jpg", "/images/adds/bugatti2.jpg"],
-    date: "01-03-2020",
+    date: 1696241625000,
     price: "1000000",
     location: "Warszawa, Wola ",
     description:
@@ -20,7 +20,7 @@ export const AddsArray: newAdvertisement[] = [
 
   {
     id: "2",
-    date: "01-03-2020",
+    date: 1672571625000,
     title: "Krzesła i wygode i tanie",
     category: "Meble",
     image: ["/images/adds/chair.jpg", "/images/adds/chair2.jpg"],
@@ -35,7 +35,7 @@ export const AddsArray: newAdvertisement[] = [
   },
   {
     id: "3",
-    date: "01-03-2020",
+    date: 1671851535000,
     title: "Książka stan dobry, czytana tylko raz",
     category: "Elektronika",
     image: ["/images/adds/book.jpg", "/images/adds/book2.jpg"],
@@ -50,7 +50,7 @@ export const AddsArray: newAdvertisement[] = [
   },
   {
     id: "4",
-    date: "01-03-2020",
+    date: 1620555225000,
     title:
       "Lokomotywa stan świetny, troche kapie olej. Sprzedaje bo nie mam siły ładować do niej węgla",
     category: "Pojazdy",
@@ -66,7 +66,7 @@ export const AddsArray: newAdvertisement[] = [
   },
   {
     id: "5",
-    date: "01-03-2020",
+    date: 1612491825000,
     title: "Felgi z amelinium tego nie pomalujesz, 4 sztuki",
     category: "Pojazdy",
     image: ["/images/adds/wheel-rim.jpg", "/images/adds/wheel-rim2.jpg"],
@@ -81,7 +81,7 @@ export const AddsArray: newAdvertisement[] = [
   },
 ];
 
-export const categoryArray: CategoryItem[] = [
+export const categories: CategoryItem[] = [
   {
     id: crypto.randomUUID(),
     title: "Motoryzacja",
@@ -145,7 +145,12 @@ export const categoryArray: CategoryItem[] = [
   {
     id: crypto.randomUUID(),
     title: "Oddam za darmo",
-    image: "/images/category/category.jpg",
+    image: "/images/category/free.png",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Lampy",
+    image: "/images/category/bedside-lamp.png",
   },
   {
     id: crypto.randomUUID(),
@@ -155,7 +160,12 @@ export const categoryArray: CategoryItem[] = [
   {
     id: crypto.randomUUID(),
     title: "Outlet z Elektroniką",
-    image: "/images/category/bedside-lamp.png",
+    image: "/images/category/outletWithElectronics.png",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Odzież",
+    image: "/images/category/clothes.png",
   },
   {
     id: crypto.randomUUID(),
@@ -178,3 +188,51 @@ export const categoryWithPrice: string[] = [
   "Outlet z Elektroniką",
   "Karma z przesułką za 1zł",
 ];
+
+export const navFavorite: Favorite[] = [
+  {
+    id: crypto.randomUUID(),
+    title: "Obserwowane ogłoszenia",
+    image: "images/favorite/Adds.PNG",
+    note: "Brak obserwowanych ogłoszeń",
+    description: `Rozpocząć obserwowanie ogłoszenia możesz na liście lub na stronie ogłoszenia: Dzięki obserwowanym wszystkie ważne ogłoszenia będziesz miał zawsze pod ręką - także w Twoim telefonie.`,
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Obserwowane wyszukiwania",
+    image: "images/favorite/Searched.PNG",
+    note: "Nie masz zapisanych wyników wyszukiwania",
+    description: `Możesz oznaczyć obserwowane wyszukiwanie na liście ogłoszeń: Obserwowane wyszukiwania zapamiętują Twoją frazę wyszukiwania oraz/lub ustawienia filtrów.`,
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Ostatnio przeglądane",
+    image: "",
+    note: "",
+    description: "",
+  },
+];
+
+export const FooterNavigation: string[] = [
+  "Aplikacje mobilne OLX.pl",
+  "Pomoc",
+  "Wyróżnione ogłoszenia",
+  "Oferta dla firm",
+  "Blog",
+  "Regulamin",
+  "Polityka prywatności",
+  "Reklama",
+  "Biuro prasowe",
+  "Informacja o realizowanej strategii podatkowej",
+  "Jak działa OLX.pl",
+  "Zasady bezpieczeństwa",
+  "Mapa kategorii",
+  "Mapa miejscowości",
+  "Popularne wyszukiwania",
+  "Kariera",
+  "Ustawienia plików cookie",
+  "Cennik",
+  "Kody rabatowe",
+  "Ubezpieczenia OC/AC",
+];
+

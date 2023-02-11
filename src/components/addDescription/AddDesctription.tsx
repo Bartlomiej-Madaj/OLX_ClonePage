@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AddsArray } from "../../data/data";
+import { Advertisements } from "../../data/data";
 import { useParams } from "react-router-dom";
 import Announcement from "./Announcement";
 import { newAdvertisement } from "../../types/globalType";
@@ -10,7 +10,7 @@ import LoadingStuff from "../UI/LoadingStuff";
 
 function AddDesctription() {
   const [newAdvertisement, setNewAdvertisement] = useState<
-    newAdvertisement[] | null
+    (newAdvertisement | undefined)[] | null
   >([]);
 
   const params = useParams();
@@ -21,7 +21,7 @@ function AddDesctription() {
       const idAdvertisement = params.id;
 
       const currentAdvertisement = newAdvertisement?.find(
-        (item) => item.id === idAdvertisement
+        (item) => item?.id === idAdvertisement
       );
       setAdvertisement(currentAdvertisement);
     }
@@ -35,13 +35,26 @@ function AddDesctription() {
       const response = data.docs.map((doc) => {
         const id = doc.id;
 
-        return {
-          ...doc.data(),
-          id: id,
-        };
+        if (doc) {
+          return {
+            date: 0,
+            title: "",
+            price: "",
+            image: ["", undefined],
+            isNegotiating: false,
+            category: "",
+            description: "",
+            location: "",
+            userName: "",
+            email: "",
+            phoneNumber: Number(""),
+            ...doc.data(),
+            id: id,
+          };
+        }
       });
 
-      setNewAdvertisement([...AddsArray, ...response]);
+      setNewAdvertisement([...Advertisements, ...response]);
     };
 
     getAdds();

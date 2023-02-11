@@ -8,10 +8,7 @@ max-width: 1200px;
 height: 100%;
 display:flex;
 flex-direction: column;
-/* justify-content: center; */
 align-items: center;
-/* overflow-x: hidden; */
 margin: 0 auto;
 margin-top: 400px;
-/* padding: 0 2rem; */
 `;

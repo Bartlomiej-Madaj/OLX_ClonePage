@@ -57,9 +57,7 @@ export const HeaderComponent = styled.nav<Props>`
         font-size: 1rem;
         font-weight: 700;
       }
-    
   }
-  
 }
 
   & > div:first-of-type a:not(a:last-of-type) {
@@ -72,7 +70,6 @@ export const HeaderComponent = styled.nav<Props>`
     color: #20cee1c4;
     transform: scale(1.02);
   }
-
 
   & > div:last-of-type {
     box-sizing: border-box;

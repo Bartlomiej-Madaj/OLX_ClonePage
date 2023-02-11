@@ -4,7 +4,7 @@ import { newAdvertisement } from "../types/globalType";
 const AdvertisementContext = createContext({
   advertisementData: {
     id: "",
-    date: "",
+    date: 0,
     title: "",
     price: "",
     image: ["", undefined],
@@ -39,7 +39,7 @@ export const AdvertisementContextProvider = ({
 }: DropContextProviderProps) => {
   const [advertisementData, setAdvertisementData] = useState<newAdvertisement>({
     id: "",
-    date: "",
+    date: 0,
     title: "",
     price: "",
     isNegotiating: false,

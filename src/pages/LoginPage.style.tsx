@@ -65,7 +65,6 @@ export const StyledLoginPage = styled.div<Props>`
     width: 52rem;
     height: 52rem;
     position: absolute;
-    /* z-index: 1; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

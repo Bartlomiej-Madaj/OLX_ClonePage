@@ -14,7 +14,7 @@ import { AdvertisementContextProvider } from "./store/advertisement-context";
 const GlobalStyle = createGlobalStyle`
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -25,17 +25,10 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
 }
 
-/* * + * {
-  margin: 1rem 0 ;
-} */
-
   body, html{
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    /* background-image: url('images/bulldozer.jpg');
-    background-position: top ;
-    background-size: contain;  */
   }
 
   a{

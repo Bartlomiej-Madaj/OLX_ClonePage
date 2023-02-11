@@ -9,7 +9,6 @@ import { StyledAdvertisementPage } from "./AdvertisementPage.style";
 function AdvertisementPage() {
   window.scrollTo(0, 0);
   
-
   return (
     <StyledAdvertisementPage>
       <Wrapper>

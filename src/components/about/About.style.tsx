@@ -7,7 +7,6 @@ export const StyledAbout = styled.section`
   text-align: center;
   padding: 1rem;
 
-
   & article {
     max-width: 700px;
     margin: 0 auto;
@@ -21,12 +20,10 @@ export const StyledAbout = styled.section`
   & span ~ a img {
     width: 5rem;
     padding: 0.8rem;
-    /* margin: 1rem 0.5rem 0; */
   }
 
   & span ~ a img:hover {
     transform: scale(1.07);
-
     cursor: pointer;
   }
 

@@ -2,10 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { StyledProps } from "../../types/globalType";
 
-// type Props = {
-//   children: React.ReactNode;
-// };
-
 export const StyledPromotedAds = styled.section`
   box-sizing: border-box;
   width: 100%;

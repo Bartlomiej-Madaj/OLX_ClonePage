@@ -99,7 +99,7 @@ export const StyledMessages = styled.div<Props>`
     background-color: white;
 
     nav {
-        box-sizing: border-box;
+      box-sizing: border-box;
       width: 80%;
       max-width: 50rem;
       height: fit-content;
@@ -131,7 +131,6 @@ export const StyledMessages = styled.div<Props>`
         border-bottom: 2px solid black;
       }
     }
-
   }
 
   & > div:last-of-type {
@@ -160,12 +159,10 @@ export const StyledMessages = styled.div<Props>`
 
         button {
           margin: 0;
-
         }
 
         div {
-
-          span{
+          span {
             text-align: left;
           }
         }
@@ -173,47 +170,39 @@ export const StyledMessages = styled.div<Props>`
     }
 
     & > div:nth-child(2) {
-
       a {
         margin: 0;
         margin-right: auto;
       }
     }
     & > div:nth-child(3) {
-    
-    nav {
-      position: relative;
-      display: grid;
-      grid-template-columns: 1fr;
-      margin: 0 auto;
-
-      a:not(a:last-of-type){
+      nav {
+        position: relative;
         display: grid;
-        place-items: center;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+
+        a:not(a:last-of-type) {
+          display: grid;
+          place-items: center;
+        }
+
+        a:last-of-type {
+          display: grid;
+          justify-content: center;
+          grid-auto-flow: column;
+        }
       }
 
-      a:last-of-type {
-        display: grid;
-        justify-content: center;
-        grid-auto-flow: column;
-        
+      nav:before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: -5rem;
+        right: -5rem;
+        height: 2px;
+        background-color: ${(props) => props.theme.headerColor};
       }
     }
-
-    nav:before {
-      content: '';
-      position: absolute;
-      top: 15px;
-      left: -5rem;
-      right: -5rem;
-      height: 2px;
-      background-color: ${props => props.theme.headerColor};
-    }
-
   }
-
-
-  }
-
-
 `;

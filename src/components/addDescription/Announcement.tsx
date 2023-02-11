@@ -1,14 +1,12 @@
+import React from "react";
 import { FlagIcon, HeartIcon } from "@heroicons/react/24/outline";
-import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { newAdvertisement } from "../newAdvertisement/NewAdvertisement";
+import { newAdvertisement } from "../../types/globalType";
 import {
   StyledAnnouncementContact,
   StyledAnnouncementDescription,
 } from "./Announcement.style";
-
-import { ref, onValue } from "firebase/database";
-// import { database } from "../../firebase-config";
+import { useGetDate } from "../../hooks/useGetDate";
 
 const SmallFlagIcon = styled(FlagIcon)`
   height: 1.2rem;
@@ -36,20 +34,10 @@ type Props = {
 };
 
 function Announcement(props: Props) {
-  // useEffect(()=> {
-
-  //   const starCountRef = ref(database, '/Adds');
-  //   onValue(starCountRef, (snapshot) => {
-  //   const data = snapshot.val();
-  //   console.log(data)
-  //   // updateStarCount(postElement, data);
-  // });
-
-  // },[])
-
   const { data } = props;
 
-  // console.log(data.price);
+  const date = useGetDate(data.date);
+
   const currencyPrice = new Intl.NumberFormat("pl-PL", {
     style: "currency",
     currency: "PLN",
@@ -58,9 +46,7 @@ function Announcement(props: Props) {
   return (
     <>
       <StyledAnnouncementDescription>
-        <span>
-          Dodane <time dateTime={data.date}>{data.date}</time>{" "}
-        </span>
+        <span>Dodane: {date}</span>
         <h1>{data.title}</h1>
         <div>
           <h2>{data.price && currencyPrice}</h2>
@@ -81,7 +67,6 @@ function Announcement(props: Props) {
       </StyledAnnouncementDescription>
       <StyledAnnouncementContact>
         <h1>Kontakt</h1>
-
         <div>
           <div>
             <img src="/images/userImage.png" alt="" />

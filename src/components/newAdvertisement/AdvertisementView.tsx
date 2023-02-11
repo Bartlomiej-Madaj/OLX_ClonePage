@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import AdvertisementContext from "../../store/advertisement-context";
+import { newAdvertisement } from "../../types/globalType";
 import Announcement from "../addDescription/Announcement";
 import Slider from "../slider/Slider";
 import { StyledBackdrop } from "../UI/Backdrop";
@@ -9,9 +10,9 @@ function AdvertisementView() {
   const advertisementViewCtx = useContext(AdvertisementContext);
   const statusCtx = useContext(AdvertisementContext);
 
-  const [advertisementView, setAdvertisementView] = useState({
+  const [advertisementView, setAdvertisementView] = useState<newAdvertisement>({
     id: "",
-    date: "",
+    date: 0,
     title: "",
     price: "",
     isNegotiating: false,

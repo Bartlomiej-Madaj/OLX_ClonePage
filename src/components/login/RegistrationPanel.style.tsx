@@ -87,7 +87,6 @@ export const StyledRegistrationPanel = styled.div`
       & > div:first-of-type {
         width: 100%;
         display: grid;
-        /* align-items: flex-start; */
         grid-template-columns: 2rem 1fr;
         height: fit-content;
         flex-wrap: wrap;
@@ -118,8 +117,6 @@ export const StyledRegistrationPanel = styled.div`
         width: 80%;
         box-sizing: border-box;
         padding: 1rem 0;
-        /* display: flex; */
-        /* flex-direction: column; */
         margin: 0 auto;
         padding-bottom: 2rem;
       }

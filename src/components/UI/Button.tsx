@@ -20,7 +20,6 @@ export const Button = styled.button<Props>`
   font-size: 1rem;
   border-radius: ${(props) => (props.border === "true" ? "0.8rem" : "none")};
   position: relative;
-  /* z-index: 0; */
   transition: all 300ms ease-in;
   display: flex;
   align-items: center;
@@ -35,7 +34,6 @@ export const Button = styled.button<Props>`
     position: absolute;
     top: -10%;
     left: -5%;
-    /* transform: translateY(-50%); */
     z-index: -1;
     border-radius: 5px;
     margin: auto 0;

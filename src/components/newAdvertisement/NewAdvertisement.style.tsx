@@ -48,7 +48,6 @@ export const StyledNewAdvertisement = styled.form<Props>`
         box-sizing: border-box;
         width: 60%;
         min-width: 300px;
-        /* margin-bottom: 1rem; */
         padding: 1rem;
         font-size: 1rem;
         background-color: ${(props: StyledProps) => props.theme.mainColor};
@@ -75,7 +74,6 @@ export const StyledNewAdvertisement = styled.form<Props>`
   & > div:nth-of-type(2) {
     width: 100%;
     box-sizing: border-box;
-    /* border: 1px solid black; */
     background-color: white;
     padding: 1rem;
     padding-bottom: 3rem;
@@ -260,7 +258,6 @@ export const StyledNewAdvertisement = styled.form<Props>`
   }
 
   & > div:nth-of-type(5) {
-    /* border: 1px solid black; */
     box-sizing: border-box;
     background-color: white;
     padding: 1rem;

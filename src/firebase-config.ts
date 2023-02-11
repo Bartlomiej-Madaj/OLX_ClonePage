@@ -3,8 +3,6 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "@firebase/firestore";
 import {getStorage} from 'firebase/storage'
 
-
-
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_APP_API_KEY,
   authDomain: "olx-clone-7fa4b.firebaseapp.com",

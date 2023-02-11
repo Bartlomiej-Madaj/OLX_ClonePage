@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Advertisement from "./Advertisement";
 import { StyledPromotedAds, StyledWrapPromotedAds } from "./PromotedAds.style";
-import { AddsArray } from "../../data/data";
+import { Advertisements } from "../../data/data";
 import { db } from "../../firebase-config";
 import { collection, getDocs } from "@firebase/firestore";
 
@@ -10,7 +10,7 @@ const PromotedAds: React.FC = () => {
 
   const [adds, setAdds] = useState<any | null>([]);
 
-  const promotedAdds = AddsArray.concat(adds);
+  const promotedAdds = Advertisements.concat(adds);
 
   useEffect(() => {
     const getAdds = async () => {

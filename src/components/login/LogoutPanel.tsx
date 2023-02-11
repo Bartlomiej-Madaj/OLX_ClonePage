@@ -12,8 +12,6 @@ function LogoutPanel() {
     const statusCtx = useContext(AdvertisementContext);
     const loginCtx = useContext(AdvertisementContext);
 
-
-
     const logoutHandler = () => {
 
         signOut(auth)

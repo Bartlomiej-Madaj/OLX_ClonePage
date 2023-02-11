@@ -1,29 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FooterNavigation } from "../../data/data";
 import { StyledFooter } from "./Footer.style";
-
-const FooterArray: string[] = [
-  "Aplikacje mobilne OLX.pl",
-  "Pomoc",
-  "Wyróżnione ogłoszenia",
-  "Oferta dla firm",
-  "Blog",
-  "Regulamin",
-  "Polityka prywatności",
-  "Reklama",
-  "Biuro prasowe",
-  "Informacja o realizowanej strategii podatkowej",
-  "Jak działa OLX.pl",
-  "Zasady bezpieczeństwa",
-  "Mapa kategorii",
-  "Mapa miejscowości",
-  "Popularne wyszukiwania",
-  "Kariera",
-  "Ustawienia plików cookie",
-  "Cennik",
-  "Kody rabatowe",
-  "Ubezpieczenia OC/AC",
-];
 
 type Props = {
   backgroundColor?: string
@@ -62,7 +40,7 @@ function Footer(props:Props) {
   return (
     <StyledFooter backgroundColor ={props.backgroundColor}>
       <div>
-        {FooterArray.map((item, index) => (
+        {FooterNavigation.map((item, index) => (
           <Link key={index} to="#">{item}</Link>
         ))}
       </div>

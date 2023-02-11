@@ -17,7 +17,6 @@ export const StyledFooter = styled.footer<Props>`
 
   & div:first-of-type {
     box-sizing: border-box;
-    /* width: fit-content; */
     height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);

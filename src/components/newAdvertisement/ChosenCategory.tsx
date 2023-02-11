@@ -5,13 +5,11 @@ import { StyledBackdrop } from "../UI/Backdrop";
 import { StyledChosenCategory } from "./ChosenCategory.style";
 
 function ChosenCategory() {
-
-    const statusCtx = useContext(AdvertisementContext);
-
+  const statusCtx = useContext(AdvertisementContext);
 
   return (
     <>
-      <StyledBackdrop onClick={() => statusCtx.changeDropStatus(false) } />
+      <StyledBackdrop onClick={() => statusCtx.changeDropStatus(false)} />
       <StyledChosenCategory>
         <MainCategory />
       </StyledChosenCategory>

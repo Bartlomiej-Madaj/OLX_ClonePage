@@ -1,10 +1,10 @@
-import React, { ReactNode, useState } from "react";
+import React, { useState } from "react";
 import { StyledAdvertisement } from "./Advertisement.style";
-// import { Advertisements } from './PromotedAds';
 import { HeartIcon } from "@heroicons/react/24/outline";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import InfoTitle from "../UI/InfoTitle";
+import { useGetDate } from "../../hooks/useGetDate";
 
 const SmallHeartIcon = styled(HeartIcon)`
   height: 1.5rem;
@@ -22,14 +22,13 @@ const SmallHeartIcon = styled(HeartIcon)`
     transform: scale(1.2);
   }
 `;
-
 interface Props {
   id: string;
   title: string;
   image: string | undefined;
   price: string;
   location: string;
-  date: string;
+  date: number;
 }
 
 const Advertisement: React.FC<Props> = (props) => {
@@ -48,7 +47,7 @@ const Advertisement: React.FC<Props> = (props) => {
     setShowTitle(false);
   };
 
-  // const wholeTitle = <h3 className='wholeTitle'>{props.title}</h3>
+  const date = useGetDate(props.date);
 
   return (
     <StyledAdvertisement>
@@ -61,12 +60,8 @@ const Advertisement: React.FC<Props> = (props) => {
         <h3>{props.title}</h3>
       </Link>
       {showTitle && <InfoTitle title={props.title} />}
-      <span>
-        {props.location} -{" "}
-        <time dateTime={props.date} datatype="">
-          {props.date}
-        </time>
-      </span>
+      <span>{props.location}</span>
+      <span>Data dodania: {date}</span>
       <h3>{currencyPrice}</h3>
       <SmallHeartIcon />
     </StyledAdvertisement>

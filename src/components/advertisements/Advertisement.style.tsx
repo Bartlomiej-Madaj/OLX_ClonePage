@@ -33,9 +33,6 @@ export const StyledAdvertisement = styled.div`
     font-size: 1rem;
     font-weight: 500;
     overflow: hidden;
-    /* word-wrap: normal; */
-    /* word-break: keep-all; */
-    /* word-spacing: 1rem; */
     white-space: wrap;
     text-overflow: ellipsis;
 
@@ -45,28 +42,20 @@ export const StyledAdvertisement = styled.div`
   }
 
   & span {
-    height: 3rem;
+    height: fit-content;
     font-size: 0.7rem;
     overflow: hidden;
     white-space: wrap;
     text-overflow: ellipsis;
     line-height: 1rem;
+    padding-bottom: 0.5rem;
   }
-
-  /* & h3:first-of-type {
-    display: block;
-    width: 100%;
-    font-size: 0.5rem;
-    margin: 0.8rem 0;
-    position: absolute;
-  } */
 
   & h3:last-of-type {
     display: block;
     width: 100%;
     font-size: 1rem;
     margin: 0.8rem 0;
-    /* white-space: normal ; */
     -webkit-line-clamp: 2;
     text-overflow: ellipsis;
     overflow: hidden;

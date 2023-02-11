@@ -21,7 +21,7 @@ export const StyledMainCategory = styled.nav`
     padding-top: 1rem;
     line-height: 1rem;
     color: ${(props: StyledProps) => props.theme.headerColor};
-    transition: transform 150ms linear;
+    transition: transform 100ms linear;
   }
 
   & span:hover {
@@ -34,17 +34,25 @@ export const StyledMainCategory = styled.nav`
     text-align: center;
   }
 
-  & img {
+  & a > div {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin: 0 auto;
+    /* border: 2px solid black; */
     background-color: #e1e1e15b;
-    padding: 0.5rem;
-    transition: transform 150ms linear;
+    overflow: hidden;
+    transition: transform 100ms linear;
   }
 
-  & img:hover {
+  & img {
+    width: 90%;
+    object-fit: cover;
+    margin: 0 auto;
+    padding: 0.5rem;
+    
+  }
+
+  & div:hover {
     transform: scale(1.05);
   }
 `;

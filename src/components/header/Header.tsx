@@ -30,7 +30,6 @@ function Header() {
   const [isDropMenu, setIsDropMenu] = useState(false);
   const [isLogout, setIsLogout] = useState(false);
 
-  // const mobileCtx = useContext(AdvertisementContext);
   const loginCtx = useContext(AdvertisementContext);
   const statusCtx = useContext(AdvertisementContext);
 
@@ -54,9 +53,6 @@ function Header() {
     setIsLogout(true);
     statusCtx.changeDropStatus(true);
   };
-
-  // const newdata = Date.now();
-  // const prevdata = Date.parse("01-03-2020");
 
   return (
     <HeaderComponent isDropMenu={isDropMenu}>

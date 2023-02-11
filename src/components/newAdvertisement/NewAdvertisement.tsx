@@ -23,20 +23,6 @@ import { newAdvertisement } from "../../types/globalType";
 const SmallCameraIcon = styled(CameraIcon)`
   height: 1.5rem;
 `;
-// export interface newAdvertisement {
-//   id: string;
-//   date: string;
-//   title: string;
-//   price: string;
-//   isNegotiating: boolean;
-//   category: string;
-//   image: (string | undefined)[];
-//   description: string;
-//   location: string;
-//   userName: string;
-//   email: string;
-//   phoneNumber: number;
-// }
 
 type State = {
   isValid: boolean;
@@ -75,7 +61,6 @@ function NewAdvertisement() {
   const mobileCtx = useContext(AdvertisementContext);
   const loginCtx = useContext(AdvertisementContext);
   const [title, setTitle] = useState("");
-  // console.log(title);
   const [titleIsValid, dispatchTitle] = useReducer(reducer, initialStatus);
   const [showCategory, setShowCategory] = useState(false);
   const [price, setPrice] = useState("");
@@ -163,8 +148,6 @@ function NewAdvertisement() {
 
     dragItem.current = null;
     dragEnterItem.current = null;
-
-    // if(!copyImageList[0]) return;
 
     setImagesList(copyImageList);
   };
@@ -297,7 +280,7 @@ function NewAdvertisement() {
 
     const newAdvertisement: newAdvertisement = {
       id: crypto.randomUUID(),
-      date: new Date().toLocaleDateString(),
+      date: Date.now(),
       title: title,
       price: price,
       image: advertisementImages,
@@ -326,8 +309,6 @@ function NewAdvertisement() {
     categoryCtx.changeCategoryName("");
 
     if (formIsValid) {
-      // console.log(newAdvertisement);
-
       createAdvertisement();
     }
   };
@@ -343,7 +324,7 @@ function NewAdvertisement() {
     setAdvertisementViewIsShown(true);
     advertisementViewCtx.changedAdvertisementData({
       id: crypto.randomUUID(),
-      date: new Date().toLocaleDateString(),
+      date: Date.now(),
       title: title,
       price: price,
       image: advertisementImages,
@@ -367,8 +348,6 @@ function NewAdvertisement() {
     }
   }, [categoryCtx.categoryName]);
 
-  //////////////////////////////////////////////// Handle to add images
-
   const [privateIndex, setPrivetIndex] = useState<string>("");
 
   useEffect(() => {
@@ -377,27 +356,13 @@ function NewAdvertisement() {
 
   const handleFile = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (!event.target.files) return;
-
     setSelectFile(event.target.files[0]);
-
-    // if (!selectFile) return;
-    // const imageRef = ref(
-    //   storage,
-    //   `addsImages/${privateIndex}/${selectFile?.name + crypto.randomUUID()}`
-    // );
-    // uploadBytes(imageRef, selectFile).then((snapshot) => {
-    //   getDownloadURL(snapshot.ref).then((url) => {
-    //     setImagesList((prev) => [url, ...prev]);
-    //   });
-    //   console.log("Upload image");
-    // });
   };
 
   const imageListRef = ref(storage, `addsImages/${privateIndex}`);
   useEffect(() => {
     listAll(imageListRef)
       .then((response) => {
-        console.log(response.items);
         response.items.forEach((item) => {
           getDownloadURL(item).then((url) => {
             if (url) {
@@ -418,8 +383,6 @@ function NewAdvertisement() {
   }, []);
 
   const hiddenFileInput = useRef<HTMLInputElement | null>(null);
-
-  console.log(hiddenFileInput.current?.getBoundingClientRect())
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     if (hiddenFileInput.current === null) return;
@@ -480,7 +443,6 @@ function NewAdvertisement() {
             {categoryInputIsInvalid && bluredMessage}
           </div>
         </div>
-
         {isPrice && (
           <section>
             <h3>Cena towaru/produktu/usługi</h3>

@@ -6,8 +6,6 @@ export const StyledLoginPanel = styled.div`
   }
 
   & form {
-    /* border: 1px solid #3e3e3e; */
-    /* text-align: center; */
 
     & > span {
       display: inline-block;
@@ -50,7 +48,6 @@ export const StyledLoginPanel = styled.div`
       padding: 1rem 0;
       display: flex;
       flex-direction: column;
-      /* align-items: center; */
       margin: 0 auto;
 
       span {

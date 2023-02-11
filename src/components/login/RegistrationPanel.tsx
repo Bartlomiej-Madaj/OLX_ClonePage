@@ -131,10 +131,10 @@ function RegistrationPanel() {
         </div>
         <div>
           <span>
-            Klikając “Załóż konto”, akceptuję{" "}
+            Klikając “Załóż konto”, akceptuję=
             <a href="#">
               <strong>Regulamin serwisu</strong>
-            </a>{" "}
+            </a>=
             OLX
           </span>
           <span>

@@ -4,7 +4,6 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { StyledSearch } from "./Search.style";
 import SearchInput from "../UI/SearchInput";
-import { SerachButton } from "../UI/SearchedButton";
 import { GreenButton } from "../UI/Button";
 
 const SmallMagnifyingGlassIcon = styled(MagnifyingGlassIcon)`
@@ -17,6 +16,8 @@ const SmallMapPinIcon = styled(MapPinIcon)`
 `;
 
 function Search() {
+
+  //enteredValue1 and enteredValue2  we can use this value to apply in database when we need particular advertisement
   const [enteredValue1, setEnteredValue1] = useState<string>("");
   const [enteredValue2, setEnteredValue2] = useState<string>("");
 
@@ -27,8 +28,6 @@ function Search() {
   const searchedGlobalValues = (value1: string) => {
     setEnteredValue2(value1);
   };
-
-  // console.log(enteredValue1, enteredValue2)
 
   const submitFormHandler: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -52,7 +51,6 @@ function Search() {
       >
         <SmallMapPinIcon />
       </SearchInput>
-
       <GreenButton>
         Szukaj <SmallMagnifyingGlassIcon />
       </GreenButton>
